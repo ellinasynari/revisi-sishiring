@@ -60,6 +60,11 @@ class MUpload extends CI_Model
     {
       $this->db->insert_batch($this->karyawan, $data);
     }
+	
+	public function delete ($id) {
+      $this->db->where('id',$id);
+      $this->db->delete('karyawan');
+   }
 
 
 }
